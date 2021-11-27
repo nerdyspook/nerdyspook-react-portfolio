@@ -11,8 +11,9 @@ const Pstyle = styled.div`
     color: var(--black);
   }
 
-  @media screen and(max-width: 768px) {
-    font-size: 1.4rem;
+  @media screen and (max-width: 768px) {
+    font-size: 1.3rem;
+    margin: 0 0.5rem;
   }
 `;
 

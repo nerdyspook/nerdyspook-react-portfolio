@@ -87,11 +87,11 @@ const HeroStyle = styled.div`
   }
 
   .hero__social {
-    left: 50px;
+    left: 10px;
   }
 
   .hero__scrollDown {
-    right: 50px;
+    right: 10px;
   }
 
   .hero__social__icons li {
@@ -125,21 +125,63 @@ const HeroStyle = styled.div`
     }
   }
 
+  @media screen and (max-width: 1024px) {
+    .hero__heading {
+      width: 100%;
+
+      .typing {
+        width: 15ch;
+
+        animation: typing 3s steps(15, end), blink-caret 0.75s step-end infinite;
+
+        // animation: typewriter 4s steps(44) 1s 1 normal both,
+        //   blinkTextCursor 500ms steps(44) infinite normal;
+
+        // animation: typing 10s steps(14), blink 0.5s step-end infinite alternate;
+        white-space: nowrap;
+        overflow: hidden;
+        border-right: 3px solid;
+      }
+
+      @keyframes typing {
+        from {
+          width: 0;
+        }
+      }
+
+      @keyframes blink {
+        50% {
+          border-color: transparent;
+        }
+      }
+
+      font-size: 1.4rem;
+      margin-bottom: -3.2rem;
+
+      .hero__name {
+        font-size: 6.5rem;
+        letter-spacing: 0.45rem;
+      }
+    }
+  }
+
   @media screen and (max-width: 768px) {
     .hero {
-      margin-top: 2rem;
-      max-height: 90vh;
+      max-height: 100vh;
     }
 
     .hero__heading {
       width: 100%;
 
       .typing {
-        width: 20ch;
-        animation: typing 3s steps(14), blink 0.5s step-end infinite alternate;
+        width: 100%;
+
+        animation: typing 3s steps(14, end), blink-caret 0.75s step-end infinite;
+
+        // animation: typing 3s steps(14), blink 0.5s step-end infinite alternate;
         white-space: nowrap;
         overflow: hidden;
-        border-right: 5px solid;
+        border-right: 3px solid;
       }
 
       @keyframes typing {
@@ -160,6 +202,38 @@ const HeroStyle = styled.div`
       .hero__name {
         font-size: 3rem;
         letter-spacing: 0.32rem;
+      }
+    }
+
+    .hero__image {
+      height: 700px;
+    }
+
+    .hero__social {
+      left: 0px;
+      bottom: 2%;
+      width: 18px;
+
+      .hero__social__indicator {
+        width: 18px;
+        p {
+          font-size: 1.2rem;
+        }
+
+        img {
+          max-height: 30px;
+        }
+      }
+    }
+
+    .hero__scrollDown {
+      right: 0px;
+      width: 18px;
+      gap: 1rem;
+      bottom: 2%;
+
+      p {
+        font-size: 1.2rem;
       }
     }
   }
