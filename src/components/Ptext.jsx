@@ -19,7 +19,7 @@ const Pstyle = styled.div`
 
 export default function Ptext({ children, light = false }) {
   return (
-    <Pstyle light={light}>
+    <Pstyle light={light} className="para">
       <p>{children}</p>
     </Pstyle>
   );
