@@ -125,7 +125,7 @@ const HeroStyle = styled.div`
     }
   }
 
-  @media screen and (max-width: 1024px) {
+  @media screen and (max-width: 1023px) {
     .hero__heading {
       width: 100%;
 
@@ -165,7 +165,7 @@ const HeroStyle = styled.div`
     }
   }
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 767px) {
     .hero {
       max-height: 100vh;
     }
