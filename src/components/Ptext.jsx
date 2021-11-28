@@ -8,7 +8,7 @@ const Pstyle = styled.div`
   line-height: 1.3em;
 
   p {
-    color: var(--black);
+    color: ${(props) => (props.light ? 'var(--gray-1)' : 'var(--black)')};
   }
 
   @media screen and (max-width: 768px) {
@@ -17,9 +17,9 @@ const Pstyle = styled.div`
   }
 `;
 
-export default function Ptext({ children }) {
+export default function Ptext({ children, light = false }) {
   return (
-    <Pstyle>
+    <Pstyle light={light}>
       <p>{children}</p>
     </Pstyle>
   );
