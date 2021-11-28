@@ -90,7 +90,7 @@ export default function AboutSection() {
       <div className="container">
         <div className="aboutSection__left">
           <SectionTitle
-            subheading="Let me introduce myself"
+            subheading="let me introduce myself"
             heading="<About me&nbsp; />"
           />
           <Ptext light>
@@ -105,7 +105,7 @@ export default function AboutSection() {
           </div>
         </div>
         <div className="aboutSection__right">
-          <img src={AboutImg} alt="about" />
+          <img src={AboutImg} alt="about" loading="lazy" />
         </div>
       </div>
     </AboutSectionStyle>
