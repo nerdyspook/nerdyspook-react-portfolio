@@ -8,32 +8,32 @@ import CavinImg from '../images/cavinimg.jpg';
 const projects = [
   {
     id: uuidv4(),
-    name: 'U Tracker',
-    desc: 'An application to track your all data from one place. I developed the website and the mobile app',
+    name: 'Google Clone',
+    desc: 'A google clone to search for up-to-date results, news, images and videos using React.js.',
     img: UTrackerImg,
   },
   {
     id: uuidv4(),
-    name: 'Green CTG',
-    desc: 'An app to help people to get an overview of how they can make the city beautiful.',
+    name: 'Modern UI UX Website',
+    desc: 'A Modern UI UX Website transformed from a Figma design',
     img: GreenCtgImg,
   },
   {
     id: uuidv4(),
-    name: 'Coin Tracker',
-    desc: 'Using this app you can track any e coin. Also you will get a good advise about investment form the professional',
+    name: 'Dictionary App',
+    desc: 'A dictionary app using html, css and javascript where we can search for words and it outputs word meaning, word pronunciation, audio pronunciation and usage example.',
     img: CoinTrackerImg,
   },
   {
     id: uuidv4(),
-    name: "Cavin's Portfolio",
-    desc: 'A portfolio for Cavin jr. A artist from New york city. The portfolio is made using ReactJs and GatsbyJs.',
+    name: 'NerdySpook Portfolio',
+    desc: 'A portfolio for myself, The portfolio is made using ReactJs',
     img: CavinImg,
   },
   {
     id: uuidv4(),
-    name: 'Tracking Soft',
-    desc: 'A tracking website that will show the performance of the website. Also you will get some useful advice to improve the performance.',
+    name: 'Weather App',
+    desc: 'A weather app get the weather details of a particular city by entering the city name.',
     img: ProjectImg,
   },
 ];
