@@ -64,6 +64,26 @@ const TestimonialStyle = styled.div`
       cursor: pointer;
     }
   }
+
+  .fade-enter {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  .fade-enter-active {
+    opacity: 1;
+    transform: scale(1);
+    transition: 250ms ease-in all;
+  }
+
+  .fade-exit {
+    opacity: 1;
+    transform: scale(1);
+  }
+  .fade-exit-active {
+    opacity: 0;
+    transform: scale(0.9);
+    transition: 250ms ease-in all;
+  }
 `;
 
 export default function TestimonialsSection() {
@@ -95,7 +115,7 @@ export default function TestimonialsSection() {
         />
         <div className="testimonial__wrapper">
           <SwitchTransition>
-            <CSSTransition>
+            <CSSTransition key={activeSlide.id} timeout={300} classNames="fade">
               <div className="testimonial__info">
                 <div className="testimonial__desc">
                   <Ptext light>{activeSlide.desc}</Ptext>
