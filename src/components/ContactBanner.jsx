@@ -1,10 +1,34 @@
 import React from 'react';
+import styled from 'styled-components';
+
 import Ptext from './Ptext';
 import Button from './Button';
 
+const ContactBannerStyle = styled.div`
+  padding: 10rem 0;
+
+  .contactBanner__wrapper {
+    background-color: var(--deep-dark);
+    border-radius: 12px;
+    padding: 5rem 0;
+    text-align: center;
+  }
+
+  .contactBanner__heading {
+    font-size: 4rem;
+    margin-bottom: 2rem;
+  }
+
+  @media screen and (max-width: 768px) {
+    .contactBanner__heading {
+      font-size: 1.8rem;
+    }
+  }
+`;
+
 export default function ContactBanner() {
   return (
-    <div>
+    <ContactBannerStyle>
       <div className="container">
         <div className="contactBanner__wrapper">
           <Ptext light>Would like to collaborate?</Ptext>
@@ -14,6 +38,6 @@ export default function ContactBanner() {
           <Button btnText="Contact Me" btnLink="/contact" />
         </div>
       </div>
-    </div>
+    </ContactBannerStyle>
   );
 }
