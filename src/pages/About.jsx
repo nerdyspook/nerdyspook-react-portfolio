@@ -4,6 +4,8 @@ import styled from 'styled-components';
 import Ptext from '../components/Ptext';
 import Button from '../components/Button';
 import AboutImg from '../assets/images/about-page-img.png';
+import AboutInfoItem from '../components/AboutInfoItem';
+import ContactBanner from '../components/ContactBanner';
 
 const AboutPageStyles = styled.div`
   padding: 20rem 0 10rem 0;
@@ -29,8 +31,8 @@ const AboutPageStyles = styled.div`
 
     span {
       background-color: var(--deep-dark);
-      padding: 0.5rem;
-      barder-radius: 0.8rem;
+      padding: 0.5rem 1rem;
+      border-radius: 0.8rem;
     }
   }
 
@@ -50,6 +52,38 @@ const AboutPageStyles = styled.div`
   .right {
     img {
       border: 2px solid var(--gray-1);
+    }
+  }
+  .about__info__items {
+    margin-top: 15rem;
+  }
+  .about__info__item {
+    margin-bottom: 10rem;
+  }
+  .about__info__heading {
+    font-size: 3.6rem;
+    text-transform: uppercase;
+  }
+
+  @media screen and (max-width: 768px) {
+    padding: 10rem 0;
+    .top-section {
+      flex-direction: column;
+      gap: 5rem;
+    }
+
+    .about__info__heading {
+      font-size: 3rem;
+    }
+
+    .about__heading {
+      font-size: 2.8rem;
+    }
+    .about__subheading {
+      font-size: 2rem;
+      span {
+        padding: 0.15rem 0.8rem;
+      }
     }
   }
 `;
@@ -92,7 +126,39 @@ export default function About() {
             <img src={AboutImg} alt="susanto pic" />
           </div>
         </div>
+
+        <div className="about__info__items">
+          <div className="about__info__item">
+            <h1 className="about__info__heading">Education</h1>
+            <AboutInfoItem
+              title="School"
+              items={['The Assembly of God Church School']}
+            />
+            <AboutInfoItem
+              title="High School"
+              items={['A.G.P.N Convent School']}
+            />
+            <AboutInfoItem
+              title="University"
+              items={['Visvesvaraya Technological University']}
+            />
+          </div>
+
+          <div className="about__info__item">
+            <h1 className="about__info__heading">Skills</h1>
+            <AboutInfoItem
+              title="Front-End"
+              items={['HTML5', 'CSS3', 'JavaScript', 'React']}
+            />
+            <AboutInfoItem
+              title="Back-End"
+              items={['Node', 'Express', 'Django']}
+            />
+            <AboutInfoItem title="Design" items={['Figma', 'Adobe XD']} />
+          </div>
+        </div>
       </div>
+      <ContactBanner />
     </AboutPageStyles>
   );
 }
