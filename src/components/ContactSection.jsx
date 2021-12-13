@@ -8,6 +8,36 @@ import ContactForm from './ContactForm';
 
 const ContactSectionStyles = styled.div`
   padding: 10rem 0;
+  .contactSection__wrapper {
+    display: flex;
+    justify-content: center;
+    gap: 5rem;
+    margin-top: 7rem;
+    position: relative;
+  }
+
+  .contactSection__wrapper::after {
+    position: absolute;
+    content: '';
+    width: 2px;
+    height: 56%;
+
+    background-color: var(--gray-1);
+  }
+
+  @media screen and (max-width: 768px) {
+    .contactSection__wrapper {
+      flex-direction: column;
+    }
+    .contactSection__wrapper::after {
+      display: none;
+    }
+
+    .left,
+    .right {
+      max-width: 100%;
+    }
+  }
 `;
 
 export default function ContactSection() {

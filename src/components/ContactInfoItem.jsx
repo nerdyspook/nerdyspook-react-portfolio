@@ -17,13 +17,13 @@ const ItemStyles = styled.div`
   .icon {
     color: var(--white);
     background-color: var(--gray-2);
-    padding: 1rem;
+    padding: 0.8rem;
     align-items: center;
     justify-content: center;
     border-radius: 100%;
   }
   svg {
-    width: 3rem;
+    width: 2.2rem;
   }
 `;
 

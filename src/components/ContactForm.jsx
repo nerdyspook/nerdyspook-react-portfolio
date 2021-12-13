@@ -1,4 +1,49 @@
 import React, { useState } from 'react';
+import styled from 'styled-components';
+
+const FormStyles = styled.form`
+  width: 100%;
+
+  .form-group {
+    width: 100%;
+    margin-bottom: 2rem;
+  }
+  label {
+    font-size: 1.8rem;
+  }
+
+  input,
+  textarea {
+    width: 100%;
+    font-size: 2rem;
+    padding: 1.2rem;
+    color: var(--gray-1);
+    background-color: var(--deep-dark);
+    outline: none;
+    border: none;
+    border-radius; 8px;
+    margin-top: 1rem;
+  }
+  textarea {
+      min-height: 250px;
+      resize: vertical;
+  }
+
+  button[type="submit"] {
+      background-color: var(--gray-1);
+      color: var(--black);
+      font-size: 2rem;
+      
+      display: inline-block;
+      outline: none;
+      border: none;
+      border-radius: .8rem;
+
+      padding: 1rem 4rem;
+      cursor: pointer;
+    
+  }
+`;
 
 export default function ContactForm() {
   const [name, setName] = useState('');
@@ -7,7 +52,7 @@ export default function ContactForm() {
 
   return (
     <div>
-      <form>
+      <FormStyles>
         <div className="form-group">
           <label htmlFor="name">
             Your Name
@@ -36,7 +81,7 @@ export default function ContactForm() {
 
         <div className="form-group">
           <label htmlFor="message">
-            Your Name
+            Message
             <textarea
               type="text"
               id="message"
@@ -48,7 +93,7 @@ export default function ContactForm() {
         </div>
 
         <button type="submit">Send</button>
-      </form>
+      </FormStyles>
     </div>
   );
 }
