@@ -11,26 +11,6 @@ import SocialMediaArrow from '../assets/images/social-media-arrow.svg';
 import ScrollDownArrow from '../assets/images/scroll-down-arrow.svg';
 
 const HeroStyle = styled.div`
-  .typing {
-    width: 14ch;
-    animation: typing 3s steps(14), blink 0.5s step-end infinite alternate;
-    white-space: nowrap;
-    overflow: hidden;
-    border-right: 5px solid;
-  }
-
-  @keyframes typing {
-    from {
-      width: 0;
-    }
-  }
-
-  @keyframes blink {
-    50% {
-      border-color: transparent;
-    }
-  }
-
   .hero {
     height: 100vh;
     min-height: 1000px;
@@ -129,32 +109,6 @@ const HeroStyle = styled.div`
     .hero__heading {
       width: 100%;
 
-      .typing {
-        width: 15ch;
-
-        animation: typing 3s steps(15, end), blink-caret 0.75s step-end infinite;
-
-        // animation: typewriter 4s steps(44) 1s 1 normal both,
-        //   blinkTextCursor 500ms steps(44) infinite normal;
-
-        // animation: typing 10s steps(14), blink 0.5s step-end infinite alternate;
-        white-space: nowrap;
-        overflow: hidden;
-        border-right: 3px solid;
-      }
-
-      @keyframes typing {
-        from {
-          width: 0;
-        }
-      }
-
-      @keyframes blink {
-        50% {
-          border-color: transparent;
-        }
-      }
-
       font-size: 1.4rem;
       margin-bottom: -3.2rem;
 
@@ -172,29 +126,6 @@ const HeroStyle = styled.div`
 
     .hero__heading {
       width: 100%;
-
-      .typing {
-        width: 100%;
-
-        animation: typing 3s steps(14, end), blink-caret 0.75s step-end infinite;
-
-        // animation: typing 3s steps(14), blink 0.5s step-end infinite alternate;
-        white-space: nowrap;
-        overflow: hidden;
-        border-right: 3px solid;
-      }
-
-      @keyframes typing {
-        from {
-          width: 0;
-        }
-      }
-
-      @keyframes blink {
-        50% {
-          border-color: transparent;
-        }
-      }
 
       font-size: 1.4rem;
       margin-bottom: -1.7rem;
