@@ -4,7 +4,7 @@ import styled from 'styled-components';
 const Pstyle = styled.div`
   max-width: 700px;
   margin: 0 auto;
-  font-size: 1.8rem;
+  font-size: ${(props) => props.size}rem;
   line-height: 1.3em;
 
   p {
@@ -17,9 +17,9 @@ const Pstyle = styled.div`
   }
 `;
 
-export default function Ptext({ children, light = false }) {
+export default function Ptext({ children, light = false, size = 1.8 }) {
   return (
-    <Pstyle light={light} className="para">
+    <Pstyle light={light} size={size} className="para">
       <p>{children}</p>
     </Pstyle>
   );

@@ -10,7 +10,7 @@ const NavbarStyles = styled.div`
   top: 0;
   left: 0;
   width: 100%;
-  padding: 1rem;
+  padding: 1rem 0;
   background-color: var(--dark-bg);
 
   ul {
@@ -98,6 +98,12 @@ const NavbarStyles = styled.div`
         display: block;
         margin-bottom: 1rem;
       }
+    }
+  }
+
+  @media screen and (max-width: 1440px) {
+    ul a {
+      font-size: 1.5rem;
     }
   }
 `;
