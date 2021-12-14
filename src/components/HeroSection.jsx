@@ -26,7 +26,7 @@ const HeroStyle = styled.div`
 
   .hero__heading {
     font-size: 2rem;
-    margin-bottom: -4.9rem;
+
     position: relative;
 
     span {
@@ -35,7 +35,7 @@ const HeroStyle = styled.div`
     }
 
     .hero__name {
-      font-size: 9.2rem;
+      font-size: 5rem;
       letter-spacing: 1rem;
       font-family: 'Montserrat SemiBold';
       color: var(--heading-color);
@@ -110,16 +110,15 @@ const HeroStyle = styled.div`
       width: 100%;
 
       font-size: 1.4rem;
-      margin-bottom: -3.2rem;
 
       .hero__name {
-        font-size: 6.5rem;
+        font-size: 1rem;
         letter-spacing: 0.45rem;
       }
     }
   }
 
-  @media screen and (max-width: 767px) {
+  @media screen and (max-width: 768px) {
     .hero {
       max-height: 100vh;
     }
@@ -128,7 +127,6 @@ const HeroStyle = styled.div`
       width: 100%;
 
       font-size: 1.4rem;
-      margin-bottom: -1.7rem;
 
       .hero__name {
         font-size: 3rem;
@@ -165,6 +163,15 @@ const HeroStyle = styled.div`
 
       p {
         font-size: 1.2rem;
+      }
+    }
+  }
+
+  @media screen and (max-width: 350px) {
+    .hero__heading {
+      font-size: 1rem;
+      .hero__name {
+        font-size: 2.2rem;
       }
     }
   }
